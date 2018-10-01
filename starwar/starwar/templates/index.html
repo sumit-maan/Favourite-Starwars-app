@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="selectWrap">
+      <select name="kind" class = "selectSlatestyle">
+        <option value="movies"> Movies</option>
+        <option value="planets"> Planets</option>
+      </select>
+    </div>    
+
+    <div class="wrap">
+        <div class="search">
+           <input id="title" type="text" name="title" value="" placeholder="Search..." class="searchTerm"  >
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search">GO</i>
+          </button>
+        </div>
+     </div>
+
+  {% if kind %}
+    <table id="data-container">
+      <tr>
+        <th>Title</th>
+        <th>Actions</th>
+      </tr>
+      {% if kind == "movies"  %}
+        {% for film in filter %}
+          <tr>
+            <td>{{ film.title }}</td>
+            <td onclick=savefilm("/savefilm?film_id={{ film.id }}")><button style="font-size:14px;"> Add to favourites</button></td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        {% for planet in filter %}
+          <tr>
+            <td>{{ planet.name }}</td>
+            <td onclick=saveplanet("/saveplanet?planet_id={{ planet.id }}")><button style="font-size:14px;"> Add to favourites</button></td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}

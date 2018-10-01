@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+{% block content %}
+  <table id="data-container">
+    <tr>
+      <th>My Favourite Planets</th>
+    </tr>
+    {% for savedplanet in filter %}
+    <tr>
+      <td>{{ savedplanet.planet.name }}</td>
+    </tr>
+    {% endfor %}
+{% endblock %}

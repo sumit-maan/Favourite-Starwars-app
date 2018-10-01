@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+.selectSlatestyle {
+  font-size: 16px;
+  height: 33px;
+  padding: 5px;
+  width: 100px;
+}
+.selectWrap{
+  width: 30%;
+  position: absolute;
+  top: 21%;
+  left: 35%;
+  transform: translate(-30%, -70%);
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  font-size: 18px;
+  
+}
+
+.searchTerm:focus{
+  color:black;
+}
+
+.searchButton {
+  position: absolute;
+  right: -50px;
+  width: 50px;
+  height: 36px;
+  text-align: top;
+  color: #000000;; 
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+    margin: auto;
+    width: 89%;
+    padding: 10px;
+}
+.header{
+  margin-bottom: 20px;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.homestyle{
+  position: absolute;
+  top: 30%;
+  left: -310%;
+  transform: translate(-50%, -50%);
+}
+.homeButton{
+  font-size: 20px;
+  color: #000000;
+}
+.fvrtmoviebutton{
+  position: absolute;
+  top: 80%;
+  left: -278%;
+  transform: translate(-50%, -50%);
+}
+.fvrtplanetbutton{
+  position: absolute;
+  top: 130%;
+  left: -278%;
+  transform: translate(-50%, -50%);
+}
+
+#data-container {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 150px;
+}
+
+#data-container td, #data-container th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#data-container tr:nth-child(even){background-color: #f2f2f2;}
+
+#data-container tr:hover {background-color: #ddd;}
+
+#data-container th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: -webkit-center;
+  background-color: #b5b4b9;
+  color: white;
+  font-size: 18px;
+}
+</style>
+</head>
+<body class="center">
+    <div class="header">
+      <h1>Star Wars </h1>
+      <div class="homestyle">
+        <button> <a class = "homeButton" style='text-decoration:none' href="/">Home</a></button>
+      </div>
+      <div>
+        <button class="fvrtmoviebutton"> <a class = "homeButton" style='text-decoration:none' href="/savedmovies">Favourite movies</a></button>
+        <button class="fvrtplanetbutton"> <a class = "homeButton" style='text-decoration:none' href="/savedplanets">Favourite Planets</a></button>
+      </div>
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+function savefilm(url){
+  debugger;
+  fetch(url)
+  .then(() => {
+     debugger; 
+  })
+}
+function saveplanet(url){
+  fetch(url)
+    .then(() => {
+
+    })
+}
+</script>
+</html>

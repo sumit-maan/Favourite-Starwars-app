@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+  <table id="data-container">
+    <tr>
+      <th>My Favourite Movies</th>
+    </tr>
+    {% for savedfilm in filter %}
+    <tr>
+        <td>{{ savedfilm.film.title }}</td>
+    </tr>
+    {% endfor %}
+{% endblock %}
