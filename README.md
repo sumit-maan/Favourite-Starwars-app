@@ -18,7 +18,8 @@ You will see a home page:
 
 * For better results prefer to use google chrome!
 
-To reset your saved database!
+To reset your saved database:
+
     1. cd to starwar directory
     2. run "python3 manage.py shell"
     3. You will see python shell
