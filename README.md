@@ -2,6 +2,7 @@
 App to view/Favourite Starwars data
 
 Follow below steps to run the server:
+   
     1. Clone the git directory to your local pc
     2. open terminal at location
     3. you should see setup.sh file in that directory 
