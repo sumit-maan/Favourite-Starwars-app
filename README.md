@@ -11,10 +11,10 @@ Follow below steps to run the server:
 
 You will see a home page:
 
-    6. On the home page, select what you want to search for (movies/planet) from the dropdown menu 
-    7. search for any keyword in search box, you will see the results accordingly
-    8. click on add to favourite to store that data into your favourite movie/planet list
-    9. You can check you favourite movies and planets using the given tabs on home page
+    1. On the home page, select what you want to search for (movies/planet) from the dropdown menu 
+    2. search for any keyword in search box, you will see the results accordingly
+    3. click on add to favourite to store that data into your favourite movie/planet list
+    4. You can check you favourite movies and planets using the given tabs on home page
 
 * For better results prefer to use google chrome!
 
