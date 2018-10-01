@@ -17,3 +17,10 @@ You will see a home page:
     9. You can check you favourite movies and planets using the given tabs on home page
 
 * For better results prefer to use google chrome!
+
+To reset your saved database!
+    1. cd to starwar directory
+    2. run "python3 manage.py shell"
+    3. You will see python shell
+    4. import data library: from starwar.models  import SavedFilm, SavedPlanet
+    5. run "SavedFilm.objects.all().delete()" / similar for Saved Planet
